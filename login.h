@@ -2,13 +2,13 @@
 #define LOGIN_H
 
 #include <QMainWindow>
-
 #include <QMessageBox>
 #include <QDebug>
 #include <QSqlDatabase>
 #include <QSqlDriver>
 #include <QSqlError>
 #include <QSqlQuery>
+
 
 namespace Ui {
 class LogIn;
@@ -24,6 +24,7 @@ public:
 
 private:
     Ui::LogIn *ui;
+    void connect_to_db();
 };
 
 #endif // LOGIN_H
