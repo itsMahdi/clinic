@@ -19,11 +19,11 @@ LogIn::~LogIn()
 void LogIn::connect_to_db(){
     const QString DRIVER("QSQLITE");
 
-    if(QSqlDatabase::isDriverAvailable("DRIVER"))
+    if(QSqlDatabase::isDriverAvailable(DRIVER))
     {
         QSqlDatabase db = QSqlDatabase::addDatabase(DRIVER);
 
-        db.setDatabaseName(":/resources/files/Main_database.db");
+        db.setDatabaseName("/home/hebeton/qt-project/clinic-project/clinic/files/Main_database.db");
 
         if(!db.open())
         {
@@ -35,4 +35,25 @@ void LogIn::connect_to_db(){
     }
     else
         qWarning() << "MainWindow::DatabaseConnect - ERROR: no driver " << DRIVER << " available";
+}
+
+void LogIn::on_pushButton_login_clicked()
+{
+    if(ui->checkBox_admin->isChecked())
+    {
+        // you should go in admin mode
+        if(1 )//ui->lineEdit_username == 'admin' && ui->lineEdit_password=='admin')
+        {
+            admin_welcome_page = new Admin_welcome_page;
+            admin_welcome_page->show();
+            hide();
+        }
+    }
+    else
+        if(1 )//ui->lineEdit_username == 'admin' && ui->lineEdit_password=='admin')
+        {
+            users_welcome_page = new Users_welcome_page;
+            users_welcome_page->show();
+            hide();
+        }
 }

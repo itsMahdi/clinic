@@ -25,13 +25,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        login.cpp
+        login.cpp \
+    admin_welcome_page.cpp \
+    users_welcome_page.cpp
 
 HEADERS += \
-        login.h
+        login.h \
+    admin_welcome_page.h \
+    users_welcome_page.h
 
 FORMS += \
-        login.ui
+        login.ui \
+    admin_welcome_page.ui \
+    users_welcome_page.ui
 
 RESOURCES += \
     source.qrc

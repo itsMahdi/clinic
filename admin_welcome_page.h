@@ -15,6 +15,9 @@ public:
     explicit Admin_welcome_page(QWidget *parent = 0);
     ~Admin_welcome_page();
 
+private slots:
+    void on_pushButton_back_clicked();
+
 private:
     Ui::Admin_welcome_page *ui;
 };

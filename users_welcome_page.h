@@ -15,6 +15,9 @@ public:
     explicit Users_welcome_page(QWidget *parent = 0);
     ~Users_welcome_page();
 
+private slots:
+    void on_pushButton_back_clicked();
+
 private:
     Ui::Users_welcome_page *ui;
 };
