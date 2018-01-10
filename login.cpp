@@ -1,11 +1,6 @@
 #include "login.h"
 #include "ui_login.h"
-#include <QMessageBox>
-#include <QDebug>
-#include <QSqlDatabase>
-#include <QSqlDriver>
-#include <QSqlError>
-#include <QSqlQuery>
+
 LogIn::LogIn(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::LogIn)
