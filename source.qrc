@@ -1,2 +1,5 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/resources">
+        <file>files/Main_database.db</file>
+    </qresource>
+</RCC>

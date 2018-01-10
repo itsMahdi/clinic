@@ -3,6 +3,13 @@
 
 #include <QMainWindow>
 
+#include <QMessageBox>
+#include <QDebug>
+#include <QSqlDatabase>
+#include <QSqlDriver>
+#include <QSqlError>
+#include <QSqlQuery>
+
 namespace Ui {
 class LogIn;
 }
