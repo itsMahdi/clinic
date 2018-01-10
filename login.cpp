@@ -23,7 +23,7 @@ void LogIn::connect_to_db(){
     {
         QSqlDatabase db = QSqlDatabase::addDatabase(DRIVER);
 
-        db.setDatabaseName("/home/hebeton/qt-project/clinic-project/clinic/files/Main_database.db");
+        db.setDatabaseName("/home/fateme/projects/database/clinic/files/Main_database.db");
 
         if(!db.open())
         {
