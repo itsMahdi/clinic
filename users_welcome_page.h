@@ -18,6 +18,10 @@ public:
 private slots:
     void on_pushButton_back_clicked();
 
+    void on_pushButton_pt_duc_clicked();
+
+    void on_pushButton_reception_clicked();
+
 private:
     Ui::Users_welcome_page *ui;
 };

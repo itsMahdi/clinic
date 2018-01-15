@@ -13,32 +13,6 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton_recepie">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>40</y>
-     <width>191</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Recipe</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>130</y>
-     <width>201</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Patient</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_back">
    <property name="geometry">
     <rect>
@@ -50,6 +24,32 @@
    </property>
    <property name="text">
     <string>back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pt_duc">
+   <property name="geometry">
+    <rect>
+     <x>248</x>
+     <y>50</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>patient ducument</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_reception">
+   <property name="geometry">
+    <rect>
+     <x>248</x>
+     <y>130</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>reception</string>
    </property>
   </widget>
  </widget>

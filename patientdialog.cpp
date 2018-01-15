@@ -1,5 +1,6 @@
 #include "patientdialog.h"
 #include "ui_patientdialog.h"
+#include "users_welcome_page.h"
 
 PatientDialog::PatientDialog(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +12,14 @@ PatientDialog::PatientDialog(QWidget *parent) :
 PatientDialog::~PatientDialog()
 {
     delete ui;
+}
+
+void PatientDialog::on_pushButton_back_pt_clicked()
+{
+
+    Users_welcome_page *b;
+    b = new Users_welcome_page;
+    b->show();
+    hide();
+
 }

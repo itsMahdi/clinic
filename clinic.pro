@@ -27,17 +27,23 @@ SOURCES += \
         main.cpp \
         login.cpp \
     admin_welcome_page.cpp \
-    users_welcome_page.cpp
+    users_welcome_page.cpp \
+    patientdialog.cpp \
+    receptiondialog.cpp
 
 HEADERS += \
         login.h \
     admin_welcome_page.h \
-    users_welcome_page.h
+    users_welcome_page.h \
+    patientdialog.h \
+    receptiondialog.h
 
 FORMS += \
         login.ui \
     admin_welcome_page.ui \
-    users_welcome_page.ui
+    users_welcome_page.ui \
+    patientdialog.ui \
+    receptiondialog.ui
 
 RESOURCES += \
     source.qrc

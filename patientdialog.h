@@ -15,6 +15,9 @@ public:
     explicit PatientDialog(QWidget *parent = 0);
     ~PatientDialog();
 
+private slots:
+    void on_pushButton_back_pt_clicked();
+
 private:
     Ui::PatientDialog *ui;
 };

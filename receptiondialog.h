@@ -15,6 +15,9 @@ public:
     explicit ReceptionDialog(QWidget *parent = 0);
     ~ReceptionDialog();
 
+private slots:
+    void on_pushButton_back_recp_clicked();
+
 private:
     Ui::ReceptionDialog *ui;
 };
