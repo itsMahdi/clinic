@@ -16,10 +16,10 @@ PatientDialog::~PatientDialog()
 
 void PatientDialog::on_pushButton_back_pt_clicked()
 {
-
-    Users_welcome_page *b;
-    b = new Users_welcome_page;
-    b->show();
-    hide();
+        close();
+//    Users_welcome_page *b;
+//    b = new Users_welcome_page;
+//    b->show();
+//    hide();
 
 }
