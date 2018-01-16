@@ -3,6 +3,7 @@
 #include <login.h>
 #include "patientdialog.h"
 #include "receptiondialog.h"
+#include "insurancedialog.h"
 
 Users_welcome_page::Users_welcome_page(QWidget *parent) :
     QDialog(parent),
@@ -39,6 +40,16 @@ void Users_welcome_page::on_pushButton_reception_clicked()
     receptionDialog.exec();
 }
 
+
+
+void Users_welcome_page::on_pushButton_insurance_clicked()
+{
+    InsuranceDialog insuranceDialog;
+    insuranceDialog.setModal(true);
+    insuranceDialog.exec();
+
+
+}
 
 
 

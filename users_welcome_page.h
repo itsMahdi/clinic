@@ -22,6 +22,8 @@ private slots:
 
     void on_pushButton_reception_clicked();
 
+    void on_pushButton_insurance_clicked();
+
 private:
     Ui::Users_welcome_page *ui;
 };

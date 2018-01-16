@@ -29,8 +29,8 @@
   <widget class="QPushButton" name="pushButton_pt_duc">
    <property name="geometry">
     <rect>
-     <x>248</x>
-     <y>50</y>
+     <x>240</x>
+     <y>30</y>
      <width>131</width>
      <height>51</height>
     </rect>
@@ -42,14 +42,27 @@
   <widget class="QPushButton" name="pushButton_reception">
    <property name="geometry">
     <rect>
-     <x>248</x>
-     <y>130</y>
+     <x>240</x>
+     <y>100</y>
      <width>131</width>
      <height>51</height>
     </rect>
    </property>
    <property name="text">
     <string>reception</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_insurance">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>170</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>insurance</string>
    </property>
   </widget>
  </widget>
