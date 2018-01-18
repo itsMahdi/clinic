@@ -18,22 +18,9 @@
     <rect>
      <x>10</x>
      <y>120</y>
-     <width>256</width>
-     <height>192</height>
+     <width>411</width>
+     <height>221</height>
     </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_show_insu_pt">
-   <property name="geometry">
-    <rect>
-     <x>580</x>
-     <y>120</y>
-     <width>80</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>show me</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_insu_detail">
@@ -71,7 +58,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>340</y>
+     <y>360</y>
      <width>89</width>
      <height>25</height>
     </rect>
@@ -79,91 +66,6 @@
    <property name="text">
     <string>back</string>
    </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>120</y>
-     <width>256</width>
-     <height>151</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_insu_recp_id">
-      <property name="text">
-       <string>reception_id</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit_insu_recp_id"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_visit_cost">
-      <property name="text">
-       <string>dr visit cost</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_visit_cost"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_insu">
-      <property name="text">
-       <string>insurance</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QComboBox" name="comboBox_insu"/>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_cost_pt">
-      <property name="text">
-       <string>cost for patient</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLineEdit" name="lineEdit_cost_pt"/>
-    </item>
-    <item row="3" column="0" colspan="2">
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>caculate cost</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>390</x>
-     <y>340</y>
-     <width>168</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QPushButton" name="pushButton_edit_insu">
-      <property name="text">
-       <string>edit</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_add_insu">
-      <property name="text">
-       <string>add</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
   </widget>
  </widget>
  <resources/>

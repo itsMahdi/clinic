@@ -8,11 +8,7 @@ InsuranceDialog::InsuranceDialog(QWidget *parent) :
     ui(new Ui::InsuranceDialog)
 {
     ui->setupUi(this);
-    ui->comboBox_insu->addItem("tamin ejtemaee");
-    ui->comboBox_insu->addItem("sepah");
-    ui->comboBox_insu->addItem("takmili");
-    ui->comboBox_insu->addItem("rostaee");
-    ui->comboBox_insu->addItem("no insurance");
+
 }
 
 InsuranceDialog::~InsuranceDialog()

@@ -12,7 +12,7 @@ PatientDialog::PatientDialog(QWidget *parent) :
 
     ui->comboBox_p_insu->addItem("tamin ejtemaee");
     ui->comboBox_p_insu->addItem("sepah");
-    ui->comboBox_p_insu->addItem("niroye mosalah");
+    ui->comboBox_p_insu->addItem("niro haye mosalah");
     ui->comboBox_p_insu->addItem("takmili");
     ui->comboBox_p_insu->addItem("rostaee");
     ui->comboBox_p_insu->addItem("no insurance");
