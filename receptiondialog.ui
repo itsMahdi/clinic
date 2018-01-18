@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>661</width>
+    <width>743</width>
     <height>483</height>
    </rect>
   </property>
@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="pushButton_back_recp">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>350</y>
+     <x>10</x>
+     <y>380</y>
      <width>89</width>
      <height>31</height>
     </rect>
@@ -29,7 +29,7 @@
   <widget class="QLabel" name="label_recp_info">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>260</x>
      <y>10</y>
      <width>191</width>
      <height>31</height>
@@ -50,33 +50,20 @@
      <x>10</x>
      <y>120</y>
      <width>301</width>
-     <height>211</height>
+     <height>231</height>
     </rect>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>350</y>
+     <x>390</x>
+     <y>380</y>
      <width>251</width>
      <height>31</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QPushButton" name="pushButton_edit_recp">
-      <property name="maximumSize">
-       <size>
-        <width>150</width>
-        <height>150</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>edit</string>
-      </property>
-     </widget>
-    </item>
     <item>
      <widget class="QPushButton" name="pushButton_add_recp">
       <property name="maximumSize">
@@ -87,6 +74,19 @@
       </property>
       <property name="text">
        <string>add</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_edit_recp">
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>150</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>edit</string>
       </property>
      </widget>
     </item>
@@ -111,13 +111,82 @@
     </item>
    </layout>
   </widget>
+  <widget class="QComboBox" name="comboBox_recp_problem">
+   <property name="geometry">
+    <rect>
+     <x>115</x>
+     <y>80</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_recp_dr">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>80</y>
+     <width>86</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_recp_search_pt">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>100</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>search_pt</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>330</y>
+     <width>67</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+status</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_reception_search">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>search</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_recp_search">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>40</y>
+     <width>181</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>120</y>
-     <width>299</width>
-     <height>201</height>
+     <x>360</x>
+     <y>70</y>
+     <width>281</width>
+     <height>291</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -132,33 +201,43 @@
      <widget class="QLineEdit" name="lineEdit_recp_id"/>
     </item>
     <item row="1" column="0">
+     <widget class="QLabel" name="label_recp_pt_name">
+      <property name="text">
+       <string>patient name</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_recp_pt_name"/>
+    </item>
+    <item row="2" column="0">
      <widget class="QLabel" name="label_recp_pt_id">
       <property name="text">
        <string>patient_id</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
+    <item row="2" column="1">
      <widget class="QLineEdit" name="lineEdit_recp_pt_id"/>
     </item>
-    <item row="2" column="0">
+    <item row="3" column="0">
      <widget class="QLabel" name="label_recep_dr_id">
       <property name="text">
        <string>doctor_id</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="1">
+    <item row="3" column="1">
      <widget class="QLineEdit" name="lineEdit_recp_dr_id"/>
     </item>
-    <item row="3" column="0">
+    <item row="4" column="0">
      <widget class="QLabel" name="label_recp_date">
       <property name="text">
        <string>date</string>
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
+    <item row="4" column="1">
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QLineEdit" name="lineEdit_date_year">
@@ -192,49 +271,83 @@
       </item>
      </layout>
     </item>
-    <item row="4" column="0">
+    <item row="5" column="0">
      <widget class="QLabel" name="label_recp_time">
       <property name="text">
        <string>time</string>
       </property>
      </widget>
     </item>
-    <item row="4" column="1">
+    <item row="5" column="1">
      <widget class="QLineEdit" name="lineEdit_recp_time"/>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_vistCost">
+      <property name="text">
+       <string>visit cost</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="lineEdit_drVisitCost"/>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_cost_insu">
+      <property name="text">
+       <string>cost + insurance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QLineEdit" name="lineEdit_cost_insu"/>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>date authority</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>/</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_2"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>/</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_3"/>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>80</y>
-     <width>101</width>
-     <height>21</height>
+     <width>89</width>
+     <height>25</height>
     </rect>
    </property>
    <property name="text">
     <string>problem &amp; dr</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBox_recp_problem">
-   <property name="geometry">
-    <rect>
-     <x>115</x>
-     <y>80</y>
-     <width>91</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBox_recp_dr">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>80</y>
-     <width>86</width>
-     <height>25</height>
-    </rect>
    </property>
   </widget>
  </widget>

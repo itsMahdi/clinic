@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pushButton_back_recp_clicked();
 
+    void on_pushButton_recp_search_pt_clicked();
+
 private:
     Ui::ReceptionDialog *ui;
 };

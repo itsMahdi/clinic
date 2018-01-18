@@ -86,19 +86,19 @@
      <x>290</x>
      <y>120</y>
      <width>256</width>
-     <height>120</height>
+     <height>151</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
     <item row="0" column="0">
-     <widget class="QLabel" name="label_insu_pt_id">
+     <widget class="QLabel" name="label_insu_recp_id">
       <property name="text">
-       <string>patient_id</string>
+       <string>reception_id</string>
       </property>
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit_insu_pt_id"/>
+     <widget class="QLineEdit" name="lineEdit_insu_recp_id"/>
     </item>
     <item row="1" column="0">
      <widget class="QLabel" name="label_visit_cost">
@@ -120,15 +120,22 @@
     <item row="2" column="1">
      <widget class="QComboBox" name="comboBox_insu"/>
     </item>
-    <item row="3" column="0">
+    <item row="4" column="0">
      <widget class="QLabel" name="label_cost_pt">
       <property name="text">
        <string>cost for patient</string>
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
+    <item row="4" column="1">
      <widget class="QLineEdit" name="lineEdit_cost_pt"/>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>caculate cost</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

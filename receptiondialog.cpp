@@ -1,6 +1,7 @@
 #include "receptiondialog.h"
 #include "ui_receptiondialog.h"
 #include "users_welcome_page.h"
+#include "patientdialog.h"
 
 ReceptionDialog::ReceptionDialog(QWidget *parent) :
     QDialog(parent),
@@ -29,4 +30,13 @@ void ReceptionDialog::on_pushButton_back_recp_clicked()
    // b = new Users_welcome_page;
     //b->show();
    // hide();
+}
+
+void ReceptionDialog::on_pushButton_recp_search_pt_clicked()
+{
+    PatientDialog *b;
+    b = new PatientDialog;
+    b->show();
+    hide();
+
 }
