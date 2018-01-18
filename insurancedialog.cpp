@@ -30,10 +30,11 @@ void InsuranceDialog::on_pushButton_insu_detail_clicked()
 
 void InsuranceDialog::on_pushButton_insu_back_clicked()
 {
+    close();
 
-    Users_welcome_page *b;
-    b = new Users_welcome_page;
-    b->show();
-    hide();
+   // Users_welcome_page *b;
+    //b = new Users_welcome_page;
+    //b->show();
+    //hide();
 
 }

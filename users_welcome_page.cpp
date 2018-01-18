@@ -22,7 +22,8 @@ void Users_welcome_page::on_pushButton_back_clicked()
     LogIn *a;
     a = new LogIn;
     a->show();
-    hide();
+    //hide();
+    close();
 }
 
 void Users_welcome_page::on_pushButton_pt_duc_clicked()

@@ -7,6 +7,14 @@ ReceptionDialog::ReceptionDialog(QWidget *parent) :
     ui(new Ui::ReceptionDialog)
 {
     ui->setupUi(this);
+    ui->comboBox_recp_problem->addItem("general practitioner");
+    ui->comboBox_recp_problem->addItem("cardiologist");
+    ui->comboBox_recp_problem->addItem("neurologist");
+    ui->comboBox_recp_problem->addItem("oncologist");
+    ui->comboBox_recp_problem->addItem("orthopedist");
+    ui->comboBox_recp_problem->addItem("plastic surgeon");
+    ui->comboBox_recp_problem->addItem("psychologist");
+    ui->comboBox_recp_problem->addItem("urologist");
 }
 
 ReceptionDialog::~ReceptionDialog()
@@ -16,8 +24,9 @@ ReceptionDialog::~ReceptionDialog()
 
 void ReceptionDialog::on_pushButton_back_recp_clicked()
 {
-    Users_welcome_page *b;
-    b = new Users_welcome_page;
-    b->show();
-    hide();
+    close();
+    //Users_welcome_page *b;
+   // b = new Users_welcome_page;
+    //b->show();
+   // hide();
 }

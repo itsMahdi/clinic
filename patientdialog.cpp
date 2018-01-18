@@ -7,6 +7,8 @@ PatientDialog::PatientDialog(QWidget *parent) :
     ui(new Ui::PatientDialog)
 {
     ui->setupUi(this);
+    ui->comboBox_gender->addItem("male");
+    ui->comboBox_gender->addItem("female");
 }
 
 PatientDialog::~PatientDialog()

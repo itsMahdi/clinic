@@ -16,8 +16,9 @@ InsuDetailDialog::~InsuDetailDialog()
 
 void InsuDetailDialog::on_pushButton_insu_det_back_clicked()
 {
-    InsuranceDialog *b;
-    b = new InsuranceDialog;
-    b->show();
-    hide();
+    close();
+    //InsuranceDialog *b;
+    //b = new InsuranceDialog;
+    //b->show();
+   // hide();
 }

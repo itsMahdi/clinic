@@ -80,7 +80,7 @@
     <string>back</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -132,11 +132,11 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>270</y>
+     <x>390</x>
+     <y>340</y>
      <width>168</width>
      <height>27</height>
     </rect>
