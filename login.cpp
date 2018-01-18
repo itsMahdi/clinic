@@ -6,6 +6,10 @@ LogIn::LogIn(QWidget *parent) :
     ui(new Ui::LogIn)
 {
     ui->setupUi(this);
+    ui->comboBox_type_user->addItem("doctor");
+    ui->comboBox_type_user->addItem("admin");
+    ui->comboBox_type_user->addItem("monshi");
+
     connect_to_db();
 
 
@@ -39,6 +43,15 @@ void LogIn::connect_to_db(){
 
 void LogIn::on_pushButton_login_clicked()
 {
+
+/*   if (ui->comboBox_type_user->)
+   {
+       users_welcome_page = new Users_welcome_page;
+       users_welcome_page->show();
+       hide();
+
+   }*/
+
     if(ui->checkBox_admin->isChecked())
     {
         // you should go in admin mode
@@ -56,4 +69,5 @@ void LogIn::on_pushButton_login_clicked()
             users_welcome_page->show();
             hide();
         }
+
 }

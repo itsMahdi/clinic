@@ -13,17 +13,17 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton_doctor">
+  <widget class="QPushButton" name="pushButton_doctor_info">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>130</x>
      <y>20</y>
      <width>201</width>
      <height>71</height>
     </rect>
    </property>
    <property name="text">
-    <string>Doctors Dataset</string>
+    <string>Doctors information</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_drug">

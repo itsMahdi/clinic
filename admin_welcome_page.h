@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pushButton_back_clicked();
 
+    void on_pushButton_doctor_info_clicked();
+
 private:
     Ui::Admin_welcome_page *ui;
 };
