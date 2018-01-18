@@ -18,7 +18,7 @@ LogIn::~LogIn()
 
 void LogIn::connect_to_db(){
     const QString DRIVER("QSQLITE");
-
+    //db
     if(QSqlDatabase::isDriverAvailable(DRIVER))
     {
         QSqlDatabase db = QSqlDatabase::addDatabase(DRIVER);
