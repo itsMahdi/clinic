@@ -6,100 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>593</width>
-    <height>380</height>
+    <width>703</width>
+    <height>469</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>70</y>
-     <width>221</width>
-     <height>219</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_id_pt">
-      <property name="text">
-       <string>id</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit_id_pt"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_name_pt">
-      <property name="text">
-       <string>name</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_name_pt"/>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_gender_pt">
-      <property name="text">
-       <string>gender</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="label_tel_pt">
-      <property name="text">
-       <string>tel</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QLineEdit" name="lineEdit_tel_pt"/>
-    </item>
-    <item row="7" column="0">
-     <widget class="QLabel" name="label_adrs_pt">
-      <property name="text">
-       <string>address</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QLineEdit" name="lineEdit_adrs_pt"/>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label_birthday_pt">
-      <property name="text">
-       <string>birthday</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLineEdit" name="lineEdit_birthday_pt"/>
-    </item>
-    <item row="3" column="1">
-     <widget class="QComboBox" name="comboBox_gender"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_family_pt">
-      <property name="text">
-       <string>family</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_family_pt"/>
-    </item>
-   </layout>
-  </widget>
   <widget class="QPushButton" name="pushButton_back_pt">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>310</y>
+     <y>370</y>
      <width>81</width>
      <height>31</height>
     </rect>
@@ -154,16 +72,16 @@
     <rect>
      <x>15</x>
      <y>70</y>
-     <width>281</width>
-     <height>221</height>
+     <width>341</width>
+     <height>281</height>
     </rect>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>310</y>
+     <x>430</x>
+     <y>370</y>
      <width>254</width>
      <height>31</height>
     </rect>
@@ -207,6 +125,132 @@
        <string>delete</string>
       </property>
      </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>70</y>
+     <width>311</width>
+     <height>277</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_id_pt">
+      <property name="text">
+       <string>id</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_id_pt"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_name_pt">
+      <property name="text">
+       <string>name</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_name_pt"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_family_pt">
+      <property name="text">
+       <string>family</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="lineEdit_family_pt"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_gender_pt">
+      <property name="text">
+       <string>gender</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QComboBox" name="comboBox_gender"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_birthday_pt">
+      <property name="text">
+       <string>birthday</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="lineEdit_birthday_pt"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_tel_pt">
+      <property name="text">
+       <string>tel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="lineEdit_tel_pt"/>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_adrs_pt">
+      <property name="text">
+       <string>address</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="lineEdit_adrs_pt"/>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_pt_insu">
+      <property name="text">
+       <string>insurance</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QComboBox" name="comboBox_p_insu"/>
+    </item>
+    <item row="8" column="0" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_pt_doc_athurity">
+        <property name="text">
+         <string>date authority</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_authority_y"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>/</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_authority_m"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>/</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_authority_d"/>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
