@@ -20,6 +20,8 @@ private slots:
 
     void on_pushButton_doctor_info_clicked();
 
+    void on_pushButton_visit_time_clicked();
+
 private:
     Ui::Admin_welcome_page *ui;
 };

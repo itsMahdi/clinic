@@ -1,6 +1,7 @@
 #include "login.h"
 #include "ui_login.h"
 
+
 LogIn::LogIn(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::LogIn)
@@ -63,11 +64,14 @@ void LogIn::on_pushButton_login_clicked()
         }
     }
     else
+
+
         if(1 )//ui->lineEdit_username == 'admin' && ui->lineEdit_password=='admin')
         {
             users_welcome_page = new Users_welcome_page;
             users_welcome_page->show();
             hide();
         }
+
 
 }

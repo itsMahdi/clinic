@@ -2,6 +2,7 @@
 #include "ui_admin_welcome_page.h"
 #include<login.h>
 #include "doctordialog.h"
+#include "drvisittimedialog.h"
 
 Admin_welcome_page::Admin_welcome_page(QWidget *parent) :
     QDialog(parent),
@@ -29,5 +30,13 @@ void Admin_welcome_page::on_pushButton_doctor_info_clicked()
     DoctorDialog doctorDialog;
     doctorDialog.setModal(true);
     doctorDialog.exec();
+
+}
+
+void Admin_welcome_page::on_pushButton_visit_time_clicked()
+{
+    DrVisitTimeDialog drVisitTimeDialog;
+    drVisitTimeDialog.setModal(true);
+    drVisitTimeDialog.exec();
 
 }

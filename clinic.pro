@@ -32,7 +32,9 @@ SOURCES += \
     receptiondialog.cpp \
     insurancedialog.cpp \
     insudetaildialog.cpp \
-    doctordialog.cpp
+    doctordialog.cpp \
+    visitdialog.cpp \
+    drvisittimedialog.cpp
 
 HEADERS += \
         login.h \
@@ -42,7 +44,9 @@ HEADERS += \
     receptiondialog.h \
     insurancedialog.h \
     insudetaildialog.h \
-    doctordialog.h
+    doctordialog.h \
+    visitdialog.h \
+    drvisittimedialog.h
 
 FORMS += \
         login.ui \
@@ -52,7 +56,9 @@ FORMS += \
     receptiondialog.ui \
     insurancedialog.ui \
     insudetaildialog.ui \
-    doctordialog.ui
+    doctordialog.ui \
+    visitdialog.ui \
+    drvisittimedialog.ui
 
 RESOURCES += \
     source.qrc
