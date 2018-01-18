@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pushButton_back_pt_clicked();
 
+    void on_pushButton_add_pt_clicked();
+
 private:
     Ui::PatientDialog *ui;
 };
