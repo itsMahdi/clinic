@@ -8,6 +8,7 @@
 #include <QSqlDriver>
 #include <QSqlError>
 #include <QSqlQuery>
+#include<QSqlQueryModel>
 #include <QMessageBox>
 
 PatientDialog::PatientDialog(QWidget *parent) :
@@ -15,6 +16,8 @@ PatientDialog::PatientDialog(QWidget *parent) :
     ui(new Ui::PatientDialog)
 {
     ui->setupUi(this);
+    update_table();
+
     ui->comboBox_gender->addItem("male");
     ui->comboBox_gender->addItem("female");
 
@@ -75,11 +78,29 @@ void PatientDialog::on_pushButton_add_pt_clicked()
     query.bindValue(":exp_d",exp_d);
 
     if (query.exec())
+    {
         ui->label_status->setText(name + family + "added successfully!");
+        update_table();
+    }
     else
     {
         qWarning()<<"ERROR IN ADD TO DB "<<query.lastError().text();
         QMessageBox::critical(this,"error in add","ERROR data not added");
     }
+
+}
+
+
+void PatientDialog::update_table(){
+    QSqlDatabase db;
+    QSqlQuery *query = new QSqlQuery(db);
+    query->prepare("SELECT p_id,name,family,gender,birthday,tel,address,"
+                   "insurance_name FROM patient_document");
+    if (!query->exec())
+        QMessageBox::critical(this,"ERROR","table error");
+
+    QSqlQueryModel *querymodel= new QSqlQueryModel();
+    querymodel->setQuery(*query);
+    ui->tableView_pt->setModel(querymodel);
 
 }

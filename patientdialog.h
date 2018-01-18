@@ -13,6 +13,8 @@ class PatientDialog : public QDialog
 
 public:
     explicit PatientDialog(QWidget *parent = 0);
+
+    void update_table();
     ~PatientDialog();
 
 private slots:
