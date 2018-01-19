@@ -77,11 +77,11 @@
     <string>doctors information</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>100</y>
+     <x>400</x>
+     <y>80</y>
      <width>311</width>
      <height>271</height>
     </rect>
@@ -193,7 +193,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>450</x>

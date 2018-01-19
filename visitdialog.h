@@ -15,6 +15,9 @@ public:
     explicit VisitDialog(QWidget *parent = 0);
     ~VisitDialog();
 
+private slots:
+    void on_pushButton_back_visit_clicked();
+
 private:
     Ui::VisitDialog *ui;
 };

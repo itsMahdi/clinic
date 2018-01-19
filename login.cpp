@@ -1,5 +1,6 @@
 #include "login.h"
 #include "ui_login.h"
+#include "visitdialog.h"
 
 
 LogIn::LogIn(QWidget *parent) :
@@ -55,8 +56,9 @@ void LogIn::on_pushButton_login_clicked()
     else{
         if (type == 1)
         {
-            doctor_dialog_page = new Doctor_dialog_page;
-            doctor_dialog_page->show();
+           VisitDialog visitDialog;
+            visitDialog.setModal(true);
+           visitDialog.exec();
             hide();
         }
 
