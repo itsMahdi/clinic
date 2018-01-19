@@ -134,7 +134,7 @@
   <widget class="QPushButton" name="pushButton_recp_search_pt">
    <property name="geometry">
     <rect>
-     <x>650</x>
+     <x>690</x>
      <y>100</y>
      <width>81</width>
      <height>31</height>
@@ -144,12 +144,12 @@
     <string>search_pt</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="label_status">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>330</y>
-     <width>67</width>
+     <x>410</x>
+     <y>420</y>
+     <width>281</width>
      <height>17</height>
     </rect>
    </property>
@@ -200,25 +200,15 @@
     <item row="0" column="1">
      <widget class="QLineEdit" name="lineEdit_recp_id"/>
     </item>
-    <item row="1" column="0">
+    <item row="2" column="0">
      <widget class="QLabel" name="label_recp_pt_name">
       <property name="text">
        <string>patient name</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_recp_pt_name"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_recp_pt_id">
-      <property name="text">
-       <string>patient_id</string>
-      </property>
-     </widget>
-    </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_recp_pt_id"/>
+     <widget class="QLineEdit" name="lineEdit_recp_pt_name"/>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="label_recep_dr_id">
@@ -248,7 +238,7 @@
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QTimeEdit" name="timeEdit"/>
+     <widget class="QTimeEdit" name="timeEdit_time"/>
     </item>
     <item row="6" column="0">
      <widget class="QLabel" name="label_vistCost">
@@ -280,7 +270,7 @@
     <item row="8" column="1">
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="lineEdit_expyr"/>
       </item>
       <item>
        <widget class="QLabel" name="label_3">
@@ -290,7 +280,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_2"/>
+       <widget class="QLineEdit" name="lineEdit_expmounth"/>
       </item>
       <item>
        <widget class="QLabel" name="label_4">
@@ -300,9 +290,19 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_3"/>
+       <widget class="QLineEdit" name="lineEdit_expday"/>
       </item>
      </layout>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_recp_pt_id"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_recp_pt_id">
+      <property name="text">
+       <string>patient_id</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -317,6 +317,19 @@
    </property>
    <property name="text">
     <string>problem &amp; dr</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>290</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>calculate!</string>
    </property>
   </widget>
  </widget>
