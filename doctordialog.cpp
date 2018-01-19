@@ -151,3 +151,50 @@ void DoctorDialog::on_tableView_dr_doubleClicked(const QModelIndex &index)
         }
     }
 }
+
+void DoctorDialog::on_pushButton_edit_dr_clicked()
+{
+    int id = ui->lineEdit_id->text().toInt();
+    QString name = ui->lineEdit_name->text();
+    QString family = ui->lineEdit_family->text();
+    QString exp = ui->comboBox_expertise_dr->currentText();
+    QString gender = ui->comboBox_gender_dr->currentText();
+    QString birthday = ui->lineEdit_birthday->text();
+    QString tell = ui->lineEdit_tell->text();
+    QString mail = ui->lineEdit_mail->text();
+    QString address = ui->lineEdit_address->text();
+    int cost = ui->lineEdit_cost->text().toInt();
+    QString user = ui->lineEdit_user->text();
+    QString pass=ui->lineEdit_pass->text();
+
+    QSqlQuery query;
+    query.prepare("UPDATE doctor_document SET name=:name,family=:family , "
+                  "exp=:exp,"
+                  "gender=:gender,birthday=:birthday,tell=:tell,"
+                  "mail=:mail,address=:address,"
+                  "cost=:cost,user=:user,pass=:pass "
+                  "WHERE d_id=:id");
+    query.bindValue(":id",id);
+    query.bindValue(":name",name);
+    query.bindValue(":family",family);
+    query.bindValue(":exp",exp);
+    query.bindValue(":gender",gender);
+    query.bindValue(":birthday",birthday);
+    query.bindValue(":tell",tell);
+    query.bindValue(":mail",mail);
+    query.bindValue(":address",address);
+    query.bindValue(":cost",cost);
+    query.bindValue(":user",user);
+    query.bindValue(":pass",pass);
+
+    if(query.exec())
+    {
+        ui->label_status->setText("Dr."+name+" "+family+" updated successfully");
+        update_table();
+    }
+    else{
+        QMessageBox::critical(this,"error","ERROR IN updating");
+        qWarning()<<"ERROR IN update DOCTOR"<<query.lastError();
+    }
+
+}

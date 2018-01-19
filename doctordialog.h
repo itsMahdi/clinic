@@ -25,6 +25,8 @@ private slots:
 
     void on_tableView_dr_doubleClicked(const QModelIndex &index);
 
+    void on_pushButton_edit_dr_clicked();
+
 private:
     Ui::DoctorDialog *ui;
 };
