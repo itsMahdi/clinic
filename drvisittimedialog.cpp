@@ -59,7 +59,7 @@ void DrVisitTimeDialog::on_pushButton_add_v_time_clicked()
     {
         //ui->label_status->setText( "added successfully!");
         update_table();
-        //clear_form();
+        clear_form();
     }
     else
     {
@@ -104,13 +104,21 @@ void DrVisitTimeDialog::on_lineEdit_id_editingFinished()
 void DrVisitTimeDialog::on_pushButton_v_time_clicked() //delete
 {
     int id = ui->lineEdit_id->text().toInt();
+    QString day = ui->comboBox_weekday->currentText();
+    QString start_time = ui->lineEdit_from->text();
+    QString finish_time = ui->lineEdit_till->text();
 
     QSqlQuery query;
-    query.prepare("DELETE FROM dr_visit_time WHERE d_id=:id");
+    query.prepare("DELETE FROM dr_visit_time WHERE d_id=:id and day=:day and start =:start_time "
+                  "and finish=:finish_time");
     query.bindValue(":id",id);
+    query.bindValue(":day",day);
+    query.bindValue(":start_time",start_time);
+    query.bindValue(":finish_time",finish_time);
     if (query.exec())
     {
         QMessageBox::information(this,"delete visit time","selected visit time deleted!");
+        update_table();
         clear_form();
     }
     else
