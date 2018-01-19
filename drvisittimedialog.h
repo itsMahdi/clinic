@@ -29,6 +29,8 @@ private slots:
 
     void on_tableView_visit_time_doubleClicked(const QModelIndex &index);
 
+    void on_pushButton_edit_v_time_clicked();
+
 private:
     Ui::DrVisitTimeDialog *ui;
 };

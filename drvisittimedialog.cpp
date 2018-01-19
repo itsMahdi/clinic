@@ -47,13 +47,13 @@ void DrVisitTimeDialog::on_pushButton_add_v_time_clicked()
     QString finish_time = ui->lineEdit_till->text();
 
     QSqlQuery query;
-    query.prepare("INSERT INTO dr_visit_time( d_id ,name ,day ,start , finish ) "
+    query.prepare("INSERT INTO dr_visit_time(d_id ,name ,day ,start , finish ) "
                   "VALUES ( :d_id , :name , :day , :start_time , :finish_time )");
-    query.bindValue("d_id",id);
-    query.bindValue("name",name);
-    query.bindValue("day",day);
-    query.bindValue("start_time",start_time);
-    query.bindValue("finish_time",finish_time);
+    query.bindValue(":d_id",id);
+    query.bindValue(":name",name);
+    query.bindValue(":day",day);
+    query.bindValue(":start_time",start_time);
+    query.bindValue(":finish_time",finish_time);
 
     if (query.exec())
     {
@@ -101,12 +101,12 @@ void DrVisitTimeDialog::on_lineEdit_id_editingFinished()
 
 }
 
-void DrVisitTimeDialog::on_pushButton_v_time_clicked()
+void DrVisitTimeDialog::on_pushButton_v_time_clicked() //delete
 {
     int id = ui->lineEdit_id->text().toInt();
 
     QSqlQuery query;
-    query.prepare("DELETE FROM doctor_document WHERE d_id=:id");
+    query.prepare("DELETE FROM dr_visit_time WHERE d_id=:id");
     query.bindValue(":id",id);
     if (query.exec())
     {
@@ -148,4 +148,9 @@ void DrVisitTimeDialog::clear_form(){
     ui->comboBox_weekday->setCurrentIndex(0);
     ui->lineEdit_from->setText("");
     ui->lineEdit_till->setText("");
+}
+
+void DrVisitTimeDialog::on_pushButton_edit_v_time_clicked()
+{
+
 }
