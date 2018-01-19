@@ -20,6 +20,8 @@ private slots:
 
     void on_pushButton_recp_search_pt_clicked();
 
+    void on_comboBox_recp_problem_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::ReceptionDialog *ui;
 };

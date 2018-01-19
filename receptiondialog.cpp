@@ -3,6 +3,15 @@
 #include "users_welcome_page.h"
 #include "patientdialog.h"
 
+#include <QDialog>
+#include <QDebug>
+#include <QSqlDatabase>
+#include <QSqlDriver>
+#include <QSqlError>
+#include <QSqlQuery>
+#include<QSqlQueryModel>
+#include <QMessageBox>
+
 ReceptionDialog::ReceptionDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ReceptionDialog)
@@ -39,4 +48,19 @@ void ReceptionDialog::on_pushButton_recp_search_pt_clicked()
     b->show();
     hide();
 
+}
+
+void ReceptionDialog::on_comboBox_recp_problem_currentIndexChanged(const QString &arg1)
+{
+    QString exp = ui->comboBox_recp_problem->currentText();
+    QSqlQuery query;
+    query.prepare("SELECT * FROM doctor_document WHERE"
+                  " exp=:exp");
+    if(query.exec())
+    {
+        ui->comboBox_recp_dr->clear();
+        while (query.next()) {
+            ui->comboBox_recp_dr->addItem(query.value(3).toString());
+        }
+    }
 }

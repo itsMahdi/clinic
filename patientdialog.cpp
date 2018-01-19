@@ -21,12 +21,23 @@ PatientDialog::PatientDialog(QWidget *parent) :
     ui->comboBox_gender->addItem("male");
     ui->comboBox_gender->addItem("female");
 
-    ui->comboBox_p_insu->addItem("tamin ejtemaee");
-    ui->comboBox_p_insu->addItem("sepah");
-    ui->comboBox_p_insu->addItem("niro haye mosalah");
-    ui->comboBox_p_insu->addItem("takmili");
-    ui->comboBox_p_insu->addItem("rostaee");
-    ui->comboBox_p_insu->addItem("no insurance");
+//    ui->comboBox_p_insu->addItem("tamin ejtemaee");
+//    ui->comboBox_p_insu->addItem("sepah");
+//    ui->comboBox_p_insu->addItem("niro haye mosalah");
+//    ui->comboBox_p_insu->addItem("takmili");
+//    ui->comboBox_p_insu->addItem("rostaee");
+//    ui->comboBox_p_insu->addItem("no insurance");
+
+    QSqlQuery query;
+    query.prepare("SELECT name FROM insurance_company");
+    if(query.exec())
+    {
+        ui->comboBox_p_insu->clear();
+        while (query.next()) {
+            ui->comboBox_p_insu->addItem(query.value(0).toString());
+        }
+    }
+
 }
 
 PatientDialog::~PatientDialog()

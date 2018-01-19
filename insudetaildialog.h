@@ -13,10 +13,13 @@ class InsuDetailDialog : public QDialog
 
 public:
     explicit InsuDetailDialog(QWidget *parent = 0);
+    void update_table();
     ~InsuDetailDialog();
 
 private slots:
     void on_pushButton_insu_det_back_clicked();
+
+    void on_pushButton_add_insu_det_clicked();
 
 private:
     Ui::InsuDetailDialog *ui;
