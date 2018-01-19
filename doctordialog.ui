@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>729</width>
-    <height>466</height>
+    <width>882</width>
+    <height>593</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>100</y>
-     <width>351</width>
-     <height>251</height>
+     <y>90</y>
+     <width>461</width>
+     <height>411</height>
     </rect>
    </property>
   </widget>
@@ -27,7 +27,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>380</y>
+     <y>510</y>
      <width>89</width>
      <height>25</height>
     </rect>
@@ -39,8 +39,8 @@
   <widget class="QPushButton" name="pushButton_search_dr">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>60</y>
+     <x>8</x>
+     <y>50</y>
      <width>81</width>
      <height>31</height>
     </rect>
@@ -49,11 +49,11 @@
     <string>search</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_9">
+  <widget class="QLineEdit" name="lineEdit_search">
    <property name="geometry">
     <rect>
-     <x>112</x>
-     <y>60</y>
+     <x>110</x>
+     <y>50</y>
      <width>241</width>
      <height>31</height>
     </rect>
@@ -77,128 +77,158 @@
     <string>doctors information</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>100</y>
+     <x>480</x>
+     <y>90</y>
      <width>311</width>
-     <height>271</height>
+     <height>401</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>name</string>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit_8"/>
+     <widget class="QLineEdit" name="lineEdit_id"/>
     </item>
     <item row="1" column="0">
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="label">
       <property name="text">
-       <string>family</string>
+       <string>First name</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_7"/>
+     <widget class="QLineEdit" name="lineEdit_name"/>
     </item>
     <item row="2" column="0">
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="label_2">
       <property name="text">
-       <string>expertise</string>
+       <string>Last Name</string>
       </property>
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QComboBox" name="comboBox_expertise_dr"/>
+     <widget class="QLineEdit" name="lineEdit_family"/>
     </item>
     <item row="3" column="0">
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="label_3">
       <property name="text">
-       <string>gender</string>
+       <string>Expertise</string>
       </property>
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QComboBox" name="comboBox_gender_dr"/>
+     <widget class="QComboBox" name="comboBox_expertise_dr"/>
     </item>
     <item row="4" column="0">
-     <widget class="QLabel" name="label_8">
+     <widget class="QLabel" name="label_4">
       <property name="text">
-       <string>birthday</string>
+       <string>Gender</string>
       </property>
      </widget>
     </item>
     <item row="4" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLineEdit" name="lineEdit_4"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_9">
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_5"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_10">
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_6"/>
-      </item>
-     </layout>
+     <widget class="QComboBox" name="comboBox_gender_dr"/>
     </item>
     <item row="5" column="0">
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="label_8">
       <property name="text">
-       <string>mail</string>
+       <string>Birthday</string>
       </property>
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QLineEdit" name="lineEdit_3"/>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="lineEdit_birthday"/>
+      </item>
+     </layout>
     </item>
     <item row="6" column="0">
-     <widget class="QLabel" name="label_6">
+     <widget class="QLabel" name="label_5">
       <property name="text">
-       <string>tel</string>
+       <string>Mail</string>
       </property>
      </widget>
     </item>
     <item row="6" column="1">
-     <widget class="QLineEdit" name="lineEdit_2"/>
+     <widget class="QLineEdit" name="lineEdit_mail"/>
     </item>
     <item row="7" column="0">
-     <widget class="QLabel" name="label_7">
+     <widget class="QLabel" name="label_6">
       <property name="text">
-       <string>addres</string>
+       <string>Tell</string>
       </property>
      </widget>
     </item>
     <item row="7" column="1">
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="lineEdit_tell"/>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Address</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QLineEdit" name="lineEdit_address"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>id</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>Username:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label_12">
+      <property name="text">
+       <string>Password:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>reenter password</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="QLineEdit" name="lineEdit_user"/>
+    </item>
+    <item row="11" column="1">
+     <widget class="QLineEdit" name="lineEdit_pass"/>
+    </item>
+    <item row="12" column="1">
+     <widget class="QLineEdit" name="lineEdit_pass2"/>
+    </item>
+    <item row="9" column="1">
+     <widget class="QLineEdit" name="lineEdit_cost"/>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_14">
+      <property name="text">
+       <string>COST</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>380</y>
-     <width>254</width>
+     <x>490</x>
+     <y>530</y>
+     <width>311</width>
      <height>27</height>
     </rect>
    </property>
@@ -225,6 +255,19 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label_status">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>560</y>
+     <width>291</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+ STATUS</string>
+   </property>
   </widget>
  </widget>
  <resources/>
