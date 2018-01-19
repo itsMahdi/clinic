@@ -1,5 +1,6 @@
 #include "visitdialog.h"
 #include "ui_visitdialog.h"
+#include "login.h"
 
 VisitDialog::VisitDialog(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +12,13 @@ VisitDialog::VisitDialog(QWidget *parent) :
 VisitDialog::~VisitDialog()
 {
     delete ui;
+}
+
+void VisitDialog::on_pushButton_back_visit_clicked()
+{
+    LogIn *a;
+    a = new LogIn;
+    a->show();
+    //hide();
+    close();
 }
