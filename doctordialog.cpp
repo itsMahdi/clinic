@@ -77,6 +77,7 @@ void DoctorDialog::on_pushButton_add_dr_clicked()
     {
         ui->label_status->setText("Dr."+name+" "+family+" added successfully");
         update_table();
+        clear_form();
     }
     else{
         QMessageBox::critical(this,"error","ERROR IN ADDING");
@@ -114,6 +115,7 @@ void DoctorDialog::on_pushButton_delete_dr_clicked()
     else{
         ui->label_status->setText("Dr. "+ui->lineEdit_id->text()+" deleted successfully!");
         update_table();
+        clear_form();
     }
 }
 
@@ -191,10 +193,26 @@ void DoctorDialog::on_pushButton_edit_dr_clicked()
     {
         ui->label_status->setText("Dr."+name+" "+family+" updated successfully");
         update_table();
+        clear_form();
     }
     else{
         QMessageBox::critical(this,"error","ERROR IN updating");
         qWarning()<<"ERROR IN update DOCTOR"<<query.lastError();
     }
 
+}
+
+void DoctorDialog::clear_form(){
+    ui->lineEdit_id->setText("");
+    ui->lineEdit_name->setText("");
+    ui->lineEdit_family->setText("");
+    ui->comboBox_expertise_dr->setCurrentIndex(0);
+    ui->comboBox_gender_dr->setCurrentIndex(0);
+    ui->lineEdit_birthday->setText("");
+    ui->lineEdit_tell->setText("");
+    ui->lineEdit_mail->setText("");
+    ui->lineEdit_address->setText("");
+    ui->lineEdit_cost->setText("");
+    ui->lineEdit_user->setText("");
+    ui->lineEdit_pass->setText("");
 }

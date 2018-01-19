@@ -14,6 +14,7 @@ class DoctorDialog : public QDialog
 public:
     explicit DoctorDialog(QWidget *parent = 0);
     void update_table();
+    void clear_form();
     ~DoctorDialog();
 
 private slots:
