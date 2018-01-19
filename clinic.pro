@@ -34,7 +34,8 @@ SOURCES += \
     insudetaildialog.cpp \
     doctordialog.cpp \
     visitdialog.cpp \
-    drvisittimedialog.cpp
+    drvisittimedialog.cpp \
+    doctor_dialog_page.cpp
 
 HEADERS += \
         login.h \
@@ -46,7 +47,8 @@ HEADERS += \
     insudetaildialog.h \
     doctordialog.h \
     visitdialog.h \
-    drvisittimedialog.h
+    drvisittimedialog.h \
+    doctor_dialog_page.h
 
 FORMS += \
         login.ui \
@@ -58,7 +60,8 @@ FORMS += \
     insudetaildialog.ui \
     doctordialog.ui \
     visitdialog.ui \
-    drvisittimedialog.ui
+    drvisittimedialog.ui \
+    doctor_dialog_page.ui
 
 RESOURCES += \
     source.qrc

@@ -7,9 +7,9 @@ LogIn::LogIn(QWidget *parent) :
     ui(new Ui::LogIn)
 {
     ui->setupUi(this);
+    ui->comboBox_type_user->addItem("monshi");
     ui->comboBox_type_user->addItem("doctor");
     ui->comboBox_type_user->addItem("admin");
-    ui->comboBox_type_user->addItem("monshi");
 
     connect_to_db();
 
@@ -44,34 +44,30 @@ void LogIn::connect_to_db(){
 
 void LogIn::on_pushButton_login_clicked()
 {
+    int type = ui->comboBox_type_user->currentIndex();
 
-/*   if (ui->comboBox_type_user->)
-   {
-       users_welcome_page = new Users_welcome_page;
-       users_welcome_page->show();
-       hide();
-
-   }*/
-
-    if(ui->checkBox_admin->isChecked())
+    if(type == 0)//ui->lineEdit_username == 'admin' && ui->lineEdit_password=='admin')
     {
-        // you should go in admin mode
-        if(1 )//ui->lineEdit_username == 'admin' && ui->lineEdit_password=='admin')
+        users_welcome_page = new Users_welcome_page;
+        users_welcome_page->show();
+        hide();
+    }
+    else{
+        if (type == 1)
+        {
+            doctor_dialog_page = new Doctor_dialog_page;
+            doctor_dialog_page->show();
+            hide();
+        }
+
+        if(type == 2)
         {
             admin_welcome_page = new Admin_welcome_page;
             admin_welcome_page->show();
             hide();
         }
+
     }
-    else
-
-
-        if(1 )//ui->lineEdit_username == 'admin' && ui->lineEdit_password=='admin')
-        {
-            users_welcome_page = new Users_welcome_page;
-            users_welcome_page->show();
-            hide();
-        }
 
 
 }
