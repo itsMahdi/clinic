@@ -186,7 +186,7 @@
      <x>360</x>
      <y>70</y>
      <width>322</width>
-     <height>291</height>
+     <height>312</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -238,38 +238,7 @@
      </widget>
     </item>
     <item row="4" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLineEdit" name="lineEdit_date_year">
-        <property name="maximumSize">
-         <size>
-          <width>150</width>
-          <height>150</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_s_date_recp_1">
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_date_m_pt"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_s_date_recp_2">
-        <property name="text">
-         <string>/</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_date_d_recp"/>
-      </item>
-     </layout>
+     <widget class="QDateEdit" name="dateEdit"/>
     </item>
     <item row="5" column="0">
      <widget class="QLabel" name="label_recp_time">
@@ -279,7 +248,7 @@
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QLineEdit" name="lineEdit_recp_time"/>
+     <widget class="QTimeEdit" name="timeEdit"/>
     </item>
     <item row="6" column="0">
      <widget class="QLabel" name="label_vistCost">

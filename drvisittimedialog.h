@@ -13,10 +13,21 @@ class DrVisitTimeDialog : public QDialog
 
 public:
     explicit DrVisitTimeDialog(QWidget *parent = 0);
+
+    void update_table();
+    void clear_form();
     ~DrVisitTimeDialog();
 
 private slots:
     void on_pushButton_back_v_time_clicked();
+
+    void on_pushButton_add_v_time_clicked();
+
+    void on_lineEdit_id_editingFinished();
+
+    void on_pushButton_v_time_clicked();
+
+    void on_tableView_visit_time_doubleClicked(const QModelIndex &index);
 
 private:
     Ui::DrVisitTimeDialog *ui;
