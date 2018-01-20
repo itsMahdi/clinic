@@ -3,6 +3,7 @@
 #include <admin_welcome_page.h>
 #include <users_welcome_page.h>
 #include <doctor_dialog_page.h>
+#include "visitdialog.h"
 
 
 #include <QMainWindow>
@@ -34,6 +35,7 @@ private:
     Admin_welcome_page *admin_welcome_page;
     Users_welcome_page *users_welcome_page;
     Doctor_dialog_page *doctor_dialog_page;
+    VisitDialog *visitDialog;
 
     void connect_to_db();
 };

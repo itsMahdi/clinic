@@ -14,6 +14,7 @@ class ReceptionDialog : public QDialog
 public:
     explicit ReceptionDialog(QWidget *parent = 0);
     void update_table();
+    void clear_form();
     ~ReceptionDialog();
 
 private slots:
@@ -30,6 +31,12 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_pushButton_add_recp_clicked();
+
+    void on_pushButton_delete_recp_clicked();
+
+    void on_tableView_recp_doubleClicked(const QModelIndex &index);
+
+    void on_lineEdit_recp_pt_id_textChanged(const QString &arg1);
 
 private:
     Ui::ReceptionDialog *ui;

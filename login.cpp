@@ -1,6 +1,5 @@
 #include "login.h"
 #include "ui_login.h"
-#include "visitdialog.h"
 
 
 LogIn::LogIn(QWidget *parent) :
@@ -56,10 +55,30 @@ void LogIn::on_pushButton_login_clicked()
     else{
         if (type == 1)
         {
-           VisitDialog visitDialog;
-            visitDialog.setModal(true);
-           visitDialog.exec();
-            hide();
+           QString usr=ui->lineEdit_username->text();
+           QString pas=ui->lineEdit_password->text();
+
+           int dr_id=-1;
+           QSqlQuery query;
+           query.prepare("SELECT d_id FROM doctor_document WHERE user=:user AND pass=:pass");
+           query.bindValue(":user",usr);
+           query.bindValue(":pass",pas);
+           if(query.exec())
+               while (query.next()) {
+                   dr_id=query.value(0).toString().toInt();
+               }
+           if(dr_id>0)
+           {
+
+               visitDialog = new VisitDialog;
+               visitDialog->login_id=1;
+               visitDialog->show();
+
+               hide();
+           }
+           else{
+               ui->label_connection_status->setText("<font color=red>check your username or password! </font>");
+           }
         }
 
         if(type == 2)

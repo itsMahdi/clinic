@@ -16,7 +16,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>20</x>
      <y>20</y>
      <width>131</width>
      <height>17</height>
@@ -95,25 +95,25 @@
     </size>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>370</x>
      <y>80</y>
      <width>291</width>
-     <height>266</height>
+     <height>275</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
-    <item row="1" column="0">
+    <item row="2" column="0">
      <widget class="QLabel" name="label_2">
       <property name="text">
        <string>patient_id</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_pt_id_visit"/>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="lineEdit_pid"/>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="label_3">
@@ -125,13 +125,7 @@
     <item row="3" column="1">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLineEdit" name="lineEdit_date_visit_year"/>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_visit_month"/>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_visit_day_2"/>
+       <widget class="QDateEdit" name="dateEdit"/>
       </item>
      </layout>
     </item>
@@ -155,19 +149,29 @@
     <item row="5" column="1">
      <widget class="QTextEdit" name="textEdit_drug"/>
     </item>
-    <item row="2" column="0">
+    <item row="1" column="0">
      <widget class="QLabel" name="label_6">
       <property name="text">
-       <string>dr_id</string>
+       <string>Doctor id</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_dr_id_visit"/>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>visit id</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_did"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_vid"/>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>390</x>
@@ -217,6 +221,41 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label_welcome">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>10</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>URW Palladio L</family>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_status">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>440</y>
+     <width>201</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
   </widget>
  </widget>
  <resources/>

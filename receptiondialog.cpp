@@ -100,6 +100,11 @@ void ReceptionDialog::on_comboBox_recp_dr_currentIndexChanged(const QString &arg
 
 void ReceptionDialog::on_lineEdit_recp_pt_id_editingFinished()
 {
+    QString a = ui->label_3->text();
+}
+/*
+void ReceptionDialog::on_lineEdit_recp_pt_id_editingFinished()
+{
     int p_id=ui->lineEdit_recp_pt_id->text().toInt();
 
     QSqlQuery query;
@@ -128,11 +133,8 @@ void ReceptionDialog::on_lineEdit_recp_pt_id_editingFinished()
         qWarning()<<query.lastError().text();
     }
 
-
-
-
 }
-
+*/
 void ReceptionDialog::on_pushButton_2_clicked() //calculate
 {
     int p_id = ui->lineEdit_recp_pt_id->text().toInt();
@@ -220,4 +222,77 @@ void ReceptionDialog::update_table(){
     querymodel->setQuery(*query);
     ui->tableView_recp->setModel(querymodel);
 
+}
+
+void ReceptionDialog::on_pushButton_delete_recp_clicked()
+{
+    int id= ui->lineEdit_recp_id->text().toInt();
+    QSqlQuery query;
+    query.prepare("delete from reception where r_id=:id ");
+    query.bindValue(":id",id);
+    if(!query.exec())
+        qWarning()<<"ERROR IN DELETE";
+    else
+    {
+        update_table();
+        clear_form();
+    }
+}
+
+void ReceptionDialog::clear_form(){
+    ui->lineEdit_recp_pt_id->setText("");
+    ui->lineEdit_recp_id->setText("");
+
+}
+
+void ReceptionDialog::on_tableView_recp_doubleClicked(const QModelIndex &index)
+{
+    int row = ui->tableView_recp->currentIndex().row();
+    QString id = ui->tableView_recp->model()->index(row,0).data().toString();
+    QSqlQuery query;
+    query.prepare("select * from reception "
+                  "where r_id=:id");
+    query.bindValue(":id",id);
+    if(!query.exec())
+        qWarning()<<"SELECT ON TABLE WAS NOT OK";
+    else{
+        while(query.next())
+        {
+            ui->lineEdit_recp_id->setText(query.value(0).toString());
+            ui->lineEdit_recp_pt_id->setText(query.value(1).toString());
+            ui->lineEdit_recp_dr_id->setText(query.value(2).toString());
+        }
+    }
+
+}
+
+void ReceptionDialog::on_lineEdit_recp_pt_id_textChanged(const QString &arg1)
+{
+    int p_id=ui->lineEdit_recp_pt_id->text().toInt();
+
+    QSqlQuery query;
+    query.prepare("SELECT name,family,expire_year,expire_mounth,expire_day FROM patient_document WHERE "
+              "p_id=:p_id");
+    query.bindValue(":p_id",p_id);
+
+    if(query.exec())
+    {
+        int flag=0;
+        while (query.next()) {
+            flag=1;
+            ui->lineEdit_recp_pt_name->setText(query.value(0).toString()+" "+query.value(1).toString());
+            ui->lineEdit_expyr->setText(query.value(2).toString());
+            ui->lineEdit_expmounth->setText(query.value(3).toString());
+            ui->lineEdit_expday->setText(query.value(4).toString());
+        }
+        if(flag==0)
+        {
+            ui->lineEdit_recp_pt_name->setText("");
+            ui->lineEdit_expyr->setText("");
+            ui->lineEdit_expmounth->setText("");
+            ui->lineEdit_expday->setText("");
+        }
+    }else{
+        qWarning()<<query.lastError().text();
+    }
 }
